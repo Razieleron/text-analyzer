@@ -105,7 +105,7 @@ window.addEventListener("load", function() {
   document.querySelector("form#word-counter").addEventListener("submit", handleFormSubmission);
 });
 function boldPassage(word, text) {
-  if (isEmpty(word) || isEmpty(text)) {
+  if (isEmpty(word), isEmpty(text)) {
     return null;
   }
   const p = document.createElement("p");
