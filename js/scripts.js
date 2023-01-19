@@ -1,7 +1,14 @@
 // Utility Logic
-function isEmpty(testString) {
-  return (testString.trim().length === 0);
+function isEmpty() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+    id (arguments[i].trim().length === 0) {
+      return true;
+    }
+  }
+  return false;
 }
+
 // Business Logic
 function wordCounter(text) {
   if (isEmpty(text)) {
@@ -17,7 +24,6 @@ function wordCounter(text) {
   });
   return wordCount;
 }
-
 function numberOfOccurrencesInText(word, text) {
   if (isEmpty(word)) {
     return 0;
@@ -32,6 +38,24 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
+
+// Find the First Word using FOR LOOPS in the Text Analyzer
+function firstInstanceOfWord(word, text) {
+  const textArray = text.split(" ");
+  for (let i = 0; i < textArray.length; i++) {
+    console.log(i);
+    if (word === textArray[i]) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+
+
+
+
+//
 // MAGIC STUFF TO COUNT WORDS
 function wordCount(text) {
   // hi hi bye bye hi
@@ -50,8 +74,6 @@ function wordCount(text) {
   }
   return wordCounts;
 }
-
-
 //
 
 function omitOffensive() {
