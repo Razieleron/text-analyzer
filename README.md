@@ -130,5 +130,30 @@ boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
 
 
+Describe: displayAndCount()
+Test: "It should display 1 if there is only 1 of a particular word."
+Code:
+const word = "hello";
+const text = "hello";
+displayAndCount()
+Expected Output: Hello : 1
 
+function wordCount(text) {
+    var words = text.split(" ");
+    var wordCounts = [];
+    words.forEach(function(word) {
+        var found = false;
+        for (var i = 0; i < wordCounts.length; i++) {
+            if (wordCounts[i][0] === word) {
+                wordCounts[i][1]++;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            wordCounts.push([word, 1]);
+        }
+    });
+    return wordCounts;
+}
 
